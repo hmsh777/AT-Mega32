@@ -1,0 +1,10 @@
+
+
+#include "7segment.h"
+
+const u8 array[15]= { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x00 };
+
+void SEGMENT_Display(u8 num)
+{
+	DIO_WritePort(segment_port,array[num%10]);
+}
